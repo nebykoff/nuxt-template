@@ -9,11 +9,11 @@
 </script>
 
 <style lang="scss" module>
-    .TheHeader {
+    /* .TheHeader {
         position: fixed;
         top: 0;
         left: 0;
         z-index: 15;
         width: 100%;
-    }
+    } */
 </style>

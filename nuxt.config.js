@@ -35,7 +35,7 @@ module.exports = {
         htmlAttrs: {
             lang: 'ru'
         },
-        title: 'Шаблон Nuxt проекта',
+        title: 'Кошки',
         meta: [
             { charset: 'utf-8' },
             {

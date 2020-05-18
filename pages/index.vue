@@ -1,12 +1,17 @@
 <template>
     <div :class="$style.HomePage">
-        Home Page
+        <Gallery :items="$store.state.cats"/>
     </div>
 </template>
 
 <script>
+    import Gallery from '~/components/common/Gallery/Gallery';
+
     export default {
         name: 'HomePage',
+        components: {
+            Gallery,
+        }
     };
 </script>
 

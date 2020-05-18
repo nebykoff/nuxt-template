@@ -1,5 +1,5 @@
 <template>
-    <div>
+    <div :class="$style.page">
         <TheHeader/>
 
         <main :class="$style.main">
@@ -29,6 +29,12 @@
 </script>
 
 <style lang="scss" module>
+    .page {
+        max-width: 1400px;
+        margin: 0 auto;
+        padding: 0 50px;
+    }
+
     .main {
         min-height: calc(100vh - #{$footer-h});
     }
