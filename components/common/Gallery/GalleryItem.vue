@@ -27,6 +27,8 @@
 <style module lang="scss">
     .GalleryItem {
         position: relative;
+        margin-bottom: 56px;
+        cursor: pointer;
 
         &:hover {
             .text {

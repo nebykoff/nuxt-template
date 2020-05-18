@@ -49,6 +49,12 @@ export const state = () => ({
 export const actions = {
     async nuxtServerInit({ commit, dispatch }) {
         console.log('Nuxt Server Init');
+    },
+};
+
+export const getters = {
+    getCat: state => id => {
+        return state.cats.filter(cat => cat.id === +id);
     }
 };
 

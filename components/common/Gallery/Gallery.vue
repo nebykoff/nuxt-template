@@ -1,6 +1,8 @@
 <template>
     <div :class="$style.Gallery">
-        <GalleryItem v-for="item of items" :key="item.id" :item="item"/>
+        <nuxt-link v-for="item of items" :key="item.id" :to="'/'+ path + '/'+ item.id">
+            <GalleryItem :item="item"/>
+        </nuxt-link>
     </div>
 </template>
 
@@ -16,6 +18,10 @@
                 type: Array,
                 required: true,
             },
+            path: {
+                type: String,
+                required: true,
+            }
         }
     };
 </script>
@@ -25,9 +31,5 @@
         display: flex;
         justify-content: space-between;
         flex-wrap: wrap;
-
-        > div {
-            margin-bottom: 56px;
-        }
     }
 </style>

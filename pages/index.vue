@@ -1,6 +1,6 @@
 <template>
     <div :class="$style.HomePage">
-        <Gallery :items="$store.state.cats"/>
+        <Gallery :items="$store.state.cats" :path="'cat'"/>
     </div>
 </template>
 
