@@ -23,6 +23,7 @@ export const state = () => ({
             title: 'Кошка',
             tags: ['Не рыжая', 'Чистокровная', 'Паспорт имеется'],
             img: 'cats/4.jpg',
+            big: true,
         },
         {
             id: 5,
@@ -41,6 +42,7 @@ export const state = () => ({
             title: 'Кошка',
             tags: ['Не рыжая', 'Чистокровная', 'Паспорт имеется'],
             img: 'cats/7.jpg',
+            big: true,
         },
 
     ],
