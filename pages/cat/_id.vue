@@ -32,6 +32,7 @@
                 <div>БЛОК 3</div>
             </TheSidebar>
         </div>
+        <Carrousel :class="$style.CatDetail__carrousel"/>
         <SeeAlso :class="$style.CatDetail__seeAlso"
                  :link="nextCatLink"/>
     </div>
@@ -41,11 +42,13 @@
     import Breadcrumbs from '~/components/common/Breadcrumbs';
     import TheSidebar from '~/components/layout/TheSidebar';
     import SeeAlso from '~/components/common/SeeAlso';
+    import Carrousel from '~/components/common/Carrousel';
 
     export default {
         name: 'CatDetail',
 
         components: {
+            Carrousel,
             SeeAlso,
             TheSidebar,
             Breadcrumbs,
@@ -129,6 +132,10 @@
                 line-height: 200%;
                 letter-spacing: .01em;
             }
+        }
+
+        &__carrousel {
+            margin-top: 32px;
         }
 
         &__seeAlso {

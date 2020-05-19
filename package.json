@@ -25,6 +25,8 @@
         "nuxt-polyfill": "^1.0.3",
         "resize-observer-polyfill": "^1.5.1",
         "smoothscroll-polyfill": "^0.4.4",
+        "swiper": "^5.4.0",
+        "vue-awesome-swiper": "^4.1.1",
         "vue-lazyload": "^1.3.3"
     },
     "devDependencies": {
