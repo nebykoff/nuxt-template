@@ -12,6 +12,6 @@
 
 <style module lang="scss">
     .TheSidebar {
-        width: 200px;
+        width: 300px;
     }
 </style>
