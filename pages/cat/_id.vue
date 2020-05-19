@@ -32,17 +32,21 @@
                 <div>БЛОК 3</div>
             </TheSidebar>
         </div>
+        <SeeAlso :class="$style.CatDetail__seeAlso"
+                 :link="nextCatLink"/>
     </div>
 </template>
 
 <script>
     import Breadcrumbs from '~/components/common/Breadcrumbs';
     import TheSidebar from '~/components/layout/TheSidebar';
+    import SeeAlso from '~/components/common/SeeAlso';
 
     export default {
         name: 'CatDetail',
 
         components: {
+            SeeAlso,
             TheSidebar,
             Breadcrumbs,
         },
@@ -50,6 +54,12 @@
         computed: {
             cat() {
                 return this.$store.getters.getCat(this.$route.params.id);
+            },
+            nextCat() {
+              return this.$store.getters.getNextCat(this.cat.id)  ;
+            },
+            nextCatLink() {
+                return { url: '/cat/' + this.nextCat.id, title: this.nextCat.title };
             },
             breadcrumbs() {
                 return ['Кошки', this.cat.title];
@@ -119,6 +129,10 @@
                 line-height: 200%;
                 letter-spacing: .01em;
             }
+        }
+
+        &__seeAlso {
+            margin: 100px -50px 140px -50px;
         }
     }
 </style>

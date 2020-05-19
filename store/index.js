@@ -71,6 +71,13 @@ export const actions = {
 export const getters = {
     getCat: state => id => {
         return state.cats.filter(cat => cat.id === +id)[0];
+    },
+    getNextCat: state => id => {
+        let idx = state.cats.findIndex(cat => cat.id === +id) + 1;
+        if(idx === state.cats.length) {
+           idx = 0;
+        }
+        return state.cats[idx];
     }
 };
 
