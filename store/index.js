@@ -46,6 +46,20 @@ export const state = () => ({
         },
 
     ],
+    socialLinks: [
+        {
+            name: 'Instagram',
+            url: 'https://instagram.com',
+        },
+        {
+            name: 'Facebook',
+            url: 'https://fb.com',
+        },
+        {
+            name: 'Vkontakte ',
+            url: 'https://vk.com',
+        },
+    ],
 });
 
 export const actions = {
