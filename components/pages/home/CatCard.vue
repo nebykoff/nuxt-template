@@ -2,9 +2,9 @@
     <div :class="$style.GalleryItem"
          :style="{ 'background-image': `url(${item.img})`}">
 
-        <div :class="$style.text">
-            <div :class="$style.title">{{ item.title }}</div>
-            <div :class="$style.tags">
+        <div :class="$style.GalleryItem__text">
+            <div :class="$style.GalleryItem__title">{{ item.title }}</div>
+            <div :class="$style.GalleryItem__tags">
                 <span v-for="(tag, index) of item.tags"
                       :key="tag">
                     {{ tag.toLowerCase() }}<span v-if="index < item.tags.length - 1">,</span>
@@ -37,22 +37,22 @@
         background-size: cover;
 
         &:hover {
-            .text {
+            .GalleryItem__text {
                 visibility: visible;
                 opacity: 1;
             }
         }
-    }
 
-    .text {
-        position: absolute;
-        bottom: 0;
-        width: 100%;
-        height: 90px;
-        padding: 18px 22px;
-        background-color: $clr-gray;
-        visibility: hidden;
-        opacity: 0;
-        transition: opacity .4s ease;
+        &__text {
+            position: absolute;
+            bottom: 0;
+            width: 100%;
+            height: 90px;
+            padding: 18px 22px;
+            background-color: $clr-gray;
+            visibility: hidden;
+            opacity: 0;
+            transition: opacity .4s ease;
+        }
     }
 </style>

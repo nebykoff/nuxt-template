@@ -1,7 +1,7 @@
 <template>
     <div :class="$style.page">
         <TheHeader/>
-
+        <ThePageTitle/>
         <main :class="$style.main">
             <nuxt/>
         </main>
@@ -16,6 +16,7 @@
     import TheHeader from '~/components/layout/TheHeader';
     import TheFooter from '~/components/layout/TheFooter';
     import TheSprite from '~/components/layout/TheSprite';
+    import ThePageTitle from '~/components/layout/ThePageTitle';
     // import TheModal from '~/components/common/TheModal';
 
     export default {
@@ -23,6 +24,7 @@
             TheHeader,
             TheFooter,
             TheSprite,
+            ThePageTitle,
             // TheModal
         },
     };

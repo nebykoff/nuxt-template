@@ -56,7 +56,7 @@ export const actions = {
 
 export const getters = {
     getCat: state => id => {
-        return state.cats.filter(cat => cat.id === +id);
+        return state.cats.filter(cat => cat.id === +id)[0];
     }
 };
 

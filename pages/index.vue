@@ -25,6 +25,8 @@
 
 <style lang="scss" module>
     .HomePage {
+        padding-top: 70px;
+
         .Gallery {
             display: flex;
             justify-content: space-between;

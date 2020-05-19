@@ -1,6 +1,26 @@
 <template>
     <header :class="$style.TheHeader">
-        TheHeader
+        <nuxt-link to="/">
+            <img src="@/assets/images/logo.png"
+                 alt="Кошки">
+        </nuxt-link>
+        <ul :class="$style.TheHeader__menu">
+            <li>
+                <nuxt-link
+                    :active-class="$style.active"
+                    exact
+                    to="/">
+                    Кошки
+                </nuxt-link>
+            </li>
+            <li>
+                <nuxt-link
+                        :active-class="$style.active"
+                        to="/contacts">
+                    Контакты
+                </nuxt-link>
+            </li>
+        </ul>
     </header>
 </template>
 
@@ -9,11 +29,26 @@
 </script>
 
 <style lang="scss" module>
-    /* .TheHeader {
-        position: fixed;
-        top: 0;
-        left: 0;
-        z-index: 15;
-        width: 100%;
-    } */
+    .TheHeader {
+        display: flex;
+        justify-content: space-between;
+        height: 96px;
+        padding: 18px 0;
+
+        &__menu {
+            display: flex;
+            margin-top: 16px;
+
+            li {
+                display: block;
+                margin-left: 42px;
+                text-transform: uppercase;
+                font-size: 12px;
+            }
+        }
+
+        .active {
+            font-weight: bold;
+        }
+    }
 </style>
